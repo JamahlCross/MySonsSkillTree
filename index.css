@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #27292c;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;  /* Ensure the body takes up the full viewport height */
+    text-align: center;  /* Center text within each div */
+}
+
+.left-big-div, .right-big-div {
+    margin: auto 5px;  /* Add some margin to separate the two main divs */
+}
+
+.skill-group, .status-box, .ascension {
+    margin: auto 10px;
+}
+
+.h1-div{
+    margin: auto;
+    /* border: solid yellow; */
+    font-size: 18px;  /* Reduced font size */
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+.groupTitle{
+    margin: auto;
+}
+
+.skill-group{
+    display: flex;
+    border: solid 5px antiquewhite;
+    border-radius: 8px;
+    margin: 5px 5px;  /* Reduced margin */
+    justify-content: space-evenly;
+    width: 1100px;  /* Reduced width */
+}
+
+.basicBonus{
+    border: gray solid 2px;
+    background-color: chocolate;
+    color: bisque;
+    font-weight: bold;
+}
+
+.basicBonus:hover{
+    background-color: chocolate;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid white; */
+    margin: 5px 10px;  /* Reduced margin */
+}
+
+.btn-div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;  /* Reduced margin */
+    width: 170px;  /* Reduced width */
+    border: solid gray 5px;
+    border-radius: 10px;
+    padding: 8px;  /* Reduced padding */
+}
+
+button{
+    padding: 10px;  /* Reduced padding */
+    margin: 3px auto;
+    background-color: hsl(150 30% 60%);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;  /* Reduced font size */
+    width: 150px;  /* Reduced width */
+}
+
+button:hover{
+    background-color: hsl(150 30% 70%);
+    cursor: pointer;
+}
+
+button:active{
+    background-color: hsl(150 30% 80%);
+    cursor: pointer;
+}
+
+h2{
+    font-size: 20px;  /* Reduced font size */
+}
+
+.right-big-div{
+    /* border: solid red; */
+    height: 700px;  /* Reduced height */
+    width: 320px;  /* Reduced width */
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto 0 auto;  /* Reduced top margin */
+}
+
+#ascention{
+    font-weight: bold;
+}
+
+.ascension-btn{
+    width: 200px;  /* Reduced width */
+}
+
+p{
+    font-size: 20px;  /* Reduced font size */
+}
+
+.status-time{
+    text-align: left;
+}
+
+#big-reset{
+    margin: 20px;
+    background-color: darkgoldenrod;
+    color: gold;
+}
+
+#big-reset:hover{
+    background-color: darkorange;
+}
+
+#soft-reset-text{
+    font-size: 18px;  /* Reduced font size */
+}
+
+#big-reset-text{
+    font-size: 18px;  /* Reduced font size */
+}

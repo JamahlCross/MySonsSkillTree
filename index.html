@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <title>Makoto's skill Tree</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="left-big-div">
+        <div class="skill-group">
+            <div class="h1-div">
+                <h2 class="groupTitle">基本スキル<br>アンロック</h2></div>
+                <div class="btn-group">
+                    <div class="btn-div">
+                        <h2>習い事</h2>
+                        <button class="basicBonus" disabled>連続30分</button>
+                        <button class="basicBonus" disabled>合計30分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>暗算３級</h2>
+                        <button onclick="adjustTime('start', -10, this)">開始-10分</button>
+                        <button onclick="adjustTime('end', 10, this)">終了+10分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>暗算準２級</h2>
+                        <button onclick="adjustTime('start', -10, this)">開始-10分</button>
+                        <button onclick="adjustTime('end', 10, this)">終了+10分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>暗算２級</h2>
+                        <button onclick="adjustTime('start', -10, this)">開始-10分</button>
+                        <button onclick="adjustTime('end', 10, this)">終了+10分</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="skill-group" id="daily-clear">
+            <div class="h1-div">
+                <h2 class="groupTitle">デイリークリア<br>アクティブスキル</h2></div>
+                <div class="btn-group">
+                    <div class="btn-div">
+                        <h2>Programming<br>5 stages</h2>
+                        <button onclick="addTimeLength(15, this, 'daily')">連続+15分</button>
+                        <button onclick="addTotalTime(15, this, 'daily')">合計+15分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>Typing<br>1~3 stages</h2>
+                        <button onclick="addTimeLength(5, this, 'daily')">連続+5分</button>
+                        <button onclick="addTotalTime(5, this, 'daily')">合計+5分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>HTML<br>CSS</h2>
+                        <button onclick="addTimeLength(3, this, 'daily')">連続+3分</button>
+                        <button onclick="addTotalTime(3, this, 'daily')">合計+3分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>JS<br>Python</h2>
+                        <button onclick="addTimeLength(2, this, 'daily')">連続+2分</button>
+                        <button onclick="addTotalTime(2, this, 'daily')">合計+2分</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="skill-group">
+            <div class="h1-div">
+                <h2 class="groupTitle">コースクリア<br>パッシブスキル</h2></div>
+                <div class="btn-group">
+                    <div class="btn-div">
+                        <h2>Course C<br>Course D</h2>
+                        <button onclick="addTimeLength(5, this, 'passive')">連続+5分</button>
+                        <button onclick="addTotalTime(5, this, 'passive')">合計+5分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>Course E<br>Course F</h2>
+                        <button onclick="addTimeLength(5, this, 'passive')">連続+5分</button>
+                        <button onclick="addTotalTime(5, this, 'passive')">合計+5分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>HTML<br>CSS</h2>
+                        <button onclick="addTimeLength(5, this, 'passive')">連続+5分</button>
+                        <button onclick="addTotalTime(5, this, 'passive')">合計+5分</button>
+                    </div>
+                    <div class="btn-div">
+                        <h2>JS<br>Python</h2>
+                        <button onclick="addTimeLength(5, this, 'passive')">連続+5分</button>
+                        <button onclick="addTotalTime(5, this, 'passive')">合計+5分</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="right-big-div">
+        <div class="status-box">
+            <div>
+                <h2>ステータス</h2>
+            </div>
+            <div class="status-time">
+                <p id="consecutiveTime">連続時間: 30min</p>
+                <p id="totalAmountTime">合計時間: 30min</p>
+                <p id="startingTime">開始時間: 6:00</p>
+                <p id="endingTime">終了時間: 19:00</p>
+            </div>
+        </div>
+
+        <div class="reset-buttons">
+            
+            <button class="ascension-btn" id="small-reset" onclick="dailyReset()">
+                <span id="ascention">ソフトリセット</span><br><br>
+                <span id="soft-reset-text">デイリーをリセットする</span>
+            </button>
+            
+            <button class="ascension-btn" id="big-reset" onclick="allReset()">
+                <span id="ascention">アセンション<br>リセット<br>
+                </span><br><span id="big-reset-text">全てリセットする代わりに、スイッチが手に入る。もう一度全てをアンロックする必要がある。</span>
+            </button>
+            
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
